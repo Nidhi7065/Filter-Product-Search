@@ -1,0 +1,96 @@
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+  padding: 20px;
+}
+
+.product-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+.product-image {
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.product-info h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.edit-input {
+  width: 90%;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+  outline: none;
+  font-size: 1rem;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.edit-input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.product-info p {
+  margin: 6px 0;
+  color: #555;
+}
+
+.actions {
+  margin-top: 15px;
+}
+
+.btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: 0.25s ease;
+  color: #fff;
+}
+
+.edit-btn {
+  background: #3b82f6;
+}
+.edit-btn:hover {
+  background: #2563eb;
+}
+
+.save-btn {
+  background: #059669;
+}
+.save-btn:hover {
+  background: #047857;
+}
+
+.cancel-btn {
+  background: #dc2626;
+}
+.cancel-btn:hover {
+  background: #b91c1c;
+}

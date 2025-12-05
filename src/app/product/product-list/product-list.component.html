@@ -1,0 +1,15 @@
+<div class="page-container">
+  @if (store.loading()) {
+    <div class="loader-wrapper">
+      <div class="spinner"></div>
+      <p>Fetching awesome products for you...</p>
+    </div>
+
+  } @else {
+    <div class="products-grid fade-in">
+      @for (product of store.products(); track product) {
+        <app-product-item [product]="product"></app-product-item>
+      }
+    </div>
+  }
+</div>

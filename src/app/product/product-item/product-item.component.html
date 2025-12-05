@@ -1,0 +1,34 @@
+<div class="product-card">
+  <img
+    [src]="product.thumbnail"
+    alt="{{ product.title }}"
+    class="product-image"
+  />
+
+  <div class="product-info">
+    <h3>
+      @if (!isEditing) {
+        <span>{{ product.title }}</span>
+      }
+      @if (isEditing) {
+        <input class="edit-input" [formControl]="title" />
+      }
+    </h3>
+
+    <p><strong>Price:</strong> ${{ product.price }}</p>
+    <p><strong>Category:</strong> {{ product.category }}</p>
+    <p><strong>Brand:</strong> {{ product.brand }}</p>
+    <p><strong>Stock:</strong> {{ product.stock }}</p>
+    <p><strong>Rating:</strong> ⭐ {{ product.rating }}</p>
+
+    <div class="actions">
+      @if (!isEditing) {
+        <button class="btn edit-btn" (click)="edit()">Edit</button>
+      }
+      @if (isEditing) {
+        <button class="btn save-btn" (click)="save()">Save</button>
+        <button class="btn cancel-btn" (click)="cancel()">Cancel</button>
+      }
+    </div>
+  </div>
+</div>

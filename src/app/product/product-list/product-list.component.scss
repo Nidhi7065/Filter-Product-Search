@@ -1,0 +1,44 @@
+.page-container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f7f9fc, #eef2f7);
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 24px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.loader-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  text-align: center;
+  gap: 16px;
+  color: #555;
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid #d1d5db;
+  border-top-color: #3b82f6;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+app-product-item {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+app-product-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
